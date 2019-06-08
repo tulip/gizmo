@@ -17725,11 +17725,11 @@ CONN_03x2
 <pinref part="U1" gate="G$1" pin="PC6(/RESET)"/>
 <wire x1="63.5" y1="71.12" x2="53.34" y2="71.12" width="0.1524" layer="91"/>
 <label x="53.34" y="71.12" size="1.778" layer="95"/>
-<label x="5.08" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="2.54" y1="17.78" x2="12.7" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="5"/>
+<label x="2.54" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -17781,11 +17781,9 @@ CONN_03x2
 <label x="114.3" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="5.08" y="22.86" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="2.54" y1="22.86" x2="12.7" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="1"/>
+<label x="2.54" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -17795,11 +17793,9 @@ CONN_03x2
 <label x="114.3" y="12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="5.08" y="20.32" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="2.54" y1="20.32" x2="12.7" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="3"/>
+<label x="2.54" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="COL6" class="0">
@@ -17921,23 +17917,6 @@ CONN_03x2
 <wire x1="129.54" y1="30.48" x2="111.76" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="PE" class="0">
-<segment>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="10.16" y1="53.34" x2="10.16" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="10.16" y1="50.8" x2="12.7" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="50.8" x2="15.24" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="50.8" x2="12.7" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="48.26" x2="20.32" y2="48.26" width="0.1524" layer="91"/>
-<junction x="12.7" y="50.8"/>
-<pinref part="J2" gate="G$1" pin="SHIELD"/>
-<wire x1="20.32" y1="48.26" x2="25.4" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="48.26" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="48.26" x2="20.32" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="PE1" gate="M" pin="PE"/>
-</segment>
-</net>
 <net name="V_USB" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="VUSB"/>
@@ -17957,11 +17936,27 @@ CONN_03x2
 <label x="114.3" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="33.02" y="20.32" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="J3" gate="G$1" pin="4"/>
 <wire x1="30.48" y1="20.32" x2="40.64" y2="20.32" width="0.1524" layer="91"/>
+<label x="33.02" y="20.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PE" class="0">
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="53.34" x2="10.16" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="10.16" y1="50.8" x2="12.7" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="50.8" x2="15.24" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="50.8" x2="12.7" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="48.26" x2="20.32" y2="48.26" width="0.1524" layer="91"/>
+<junction x="12.7" y="50.8"/>
+<pinref part="J2" gate="G$1" pin="SHIELD"/>
+<wire x1="20.32" y1="48.26" x2="25.4" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="48.26" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="PE1" gate="M" pin="PE"/>
+<wire x1="20.32" y1="45.72" x2="20.32" y2="48.26" width="0.1524" layer="91"/>
+<junction x="20.32" y="48.26"/>
 </segment>
 </net>
 </nets>
@@ -18480,6 +18475,7 @@ CONN_03x2
 <wire x1="111.76" y1="121.92" x2="111.76" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="129.54" x2="99.06" y2="129.54" width="0.1524" layer="91"/>
 <junction x="99.06" y="129.54"/>
+<junction x="73.66" y="129.54"/>
 </segment>
 </net>
 <net name="ROW6" class="0">
