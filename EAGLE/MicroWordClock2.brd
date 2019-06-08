@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mm" altunit="mm"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -24,19 +24,19 @@
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="yes"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="yes"/>
 <layer number="15" name="Route15" color="23" fill="1" visible="no" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -1651,6 +1651,17 @@
 <rectangle x1="53.6695" y1="82.2257" x2="53.9743" y2="82.3019" layer="22"/>
 <rectangle x1="53.7457" y1="82.3019" x2="53.8981" y2="82.3781" layer="22"/>
 <text x="0" y="-0.381" size="0.1524" layer="200" font="vector">/Users/samchin/Downloads/Tulip Logo Flower (1).bmp</text>
+<text x="93" y="99" size="1" layer="22" font="vector" rot="MR0">SET TIME</text>
+<rectangle x1="6" y1="6" x2="36" y2="18" layer="28"/>
+<wire x1="6" y1="19" x2="6" y2="17" width="0.1" layer="22"/>
+<wire x1="7" y1="18" x2="5" y2="18" width="0.1" layer="22"/>
+<wire x1="6" y1="7" x2="6" y2="5" width="0.1" layer="22"/>
+<wire x1="5" y1="6" x2="7" y2="6" width="0.1" layer="22"/>
+<wire x1="35" y1="18" x2="37" y2="18" width="0.1" layer="22"/>
+<wire x1="36" y1="19" x2="36" y2="17" width="0.1" layer="22"/>
+<wire x1="36" y1="7" x2="36" y2="5" width="0.1" layer="22"/>
+<wire x1="35" y1="6" x2="37" y2="6" width="0.1" layer="22"/>
+<text x="29" y="12" size="1" layer="22" font="vector" rot="MR0">PLACE SERIAL HERE</text>
 </plain>
 <libraries>
 <library name="atmel" urn="urn:adsk.eagle:library:105">
@@ -3519,7 +3530,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="EU_ROHS_COMPLIANCE" value="Compliant" x="89.5" y="106" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="TE Connectivity" x="89.5" y="106" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MP" value="1-1825027-1" x="89.5" y="106" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="93.00593125" y="101.246959375" size="0.7" layer="25" font="vector" ratio="15" rot="R180"/>
+<attribute name="NAME" x="84.50593125" y="107.746959375" size="0.7" layer="25" font="vector" ratio="15" rot="R180"/>
 <attribute name="PACKAGE" value="None" x="89.5" y="106" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TE_PURCHASE_URL" value="https://www.te.com/usa-en/product-1-1825027-1.html?te_bu=Cor&amp;te_type=disp&amp;te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&amp;elqCampaignId=32493" x="89.5" y="106" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
