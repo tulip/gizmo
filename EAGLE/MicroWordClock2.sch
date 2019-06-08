@@ -17429,70 +17429,70 @@ CONN_03x2
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U$1" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$2" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$3" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$4" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$5" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$6" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$7" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$8" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$9" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$10" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$11" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$12" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$13" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$14" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$15" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$16" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$17" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$18" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$19" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$20" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$21" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$22" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$23" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$24" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$25" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$26" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$27" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$28" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$29" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$30" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$31" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$32" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$33" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$34" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$35" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$36" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$37" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$38" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$39" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$40" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$41" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$42" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$43" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$44" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$45" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$46" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$47" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$48" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$49" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$50" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$51" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$52" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$53" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$54" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$55" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$56" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$57" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$58" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$59" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$60" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$61" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$62" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$63" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
-<part name="U$64" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device=""/>
+<part name="U$1" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$2" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$3" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$4" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$5" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$6" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$7" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$8" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$9" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$10" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$11" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$12" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$13" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$14" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$15" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$16" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$17" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$18" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$19" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$20" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$21" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$22" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$23" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$24" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$25" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$26" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$27" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$28" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$29" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$30" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$31" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$32" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$33" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$34" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$35" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$36" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$37" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$38" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$39" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$40" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$41" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$42" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$43" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$44" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$45" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$46" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$47" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$48" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$49" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$50" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$51" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$52" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$53" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$54" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$55" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$56" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$57" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$58" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$59" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$60" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$61" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$62" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$63" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
+<part name="U$64" library="TULIP_GIZMO" deviceset="JE2835AWT-00-0000-0B0A0BG840E" device="" value="WHITE"/>
 <part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470"/>
 <part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470"/>
 <part name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470"/>
@@ -17523,6 +17523,7 @@ CONN_03x2
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="B/3528-21R" package3d_urn="urn:adsk.eagle:package:23409/2" value="2.2uF"/>
+<part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17547,8 +17548,8 @@ CONN_03x2
 <instance part="GND2" gate="1" x="154.94" y="43.18" smashed="yes">
 <attribute name="VALUE" x="152.4" y="40.64" size="1.778" layer="96"/>
 </instance>
-<instance part="GND5" gate="1" x="58.42" y="60.96" smashed="yes">
-<attribute name="VALUE" x="55.88" y="58.42" size="1.778" layer="96"/>
+<instance part="GND5" gate="1" x="50.8" y="60.96" smashed="yes">
+<attribute name="VALUE" x="48.26" y="58.42" size="1.778" layer="96"/>
 </instance>
 <instance part="GND4" gate="1" x="152.4" y="20.32" smashed="yes">
 <attribute name="VALUE" x="149.86" y="17.78" size="1.778" layer="96"/>
@@ -17629,6 +17630,9 @@ CONN_03x2
 <attribute name="NAME" x="51.943" y="20.8026" size="1.778" layer="95"/>
 <attribute name="VALUE" x="51.943" y="15.7226" size="1.778" layer="96"/>
 </instance>
+<instance part="P+7" gate="1" x="58.42" y="63.5" smashed="yes">
+<attribute name="VALUE" x="55.88" y="58.42" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -17657,8 +17661,8 @@ CONN_03x2
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="58.42" y1="63.5" x2="58.42" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="66.04" x2="63.5" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="63.5" x2="50.8" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="66.04" x2="63.5" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
@@ -17772,6 +17776,13 @@ CONN_03x2
 <pinref part="P+4" gate="1" pin="+5V"/>
 <wire x1="50.8" y1="25.4" x2="50.8" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="+"/>
+</segment>
+<segment>
+<pinref part="P+7" gate="1" pin="+5V"/>
+<wire x1="58.42" y1="60.96" x2="58.42" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="58.42" x2="63.5" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="AVCC"/>
+<wire x1="63.5" y1="58.42" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MISO" class="0">
