@@ -42,6 +42,15 @@ When burning bootloader, make sure to:
 - After moving .zip file to `Arduino/hardware` and unzipping, find `boards.txt` and change the line `atmega328bb.bootloader.extended_fuses=0x05` from 0x05 to 0xfd and restart Arduino IDE
 - Connect 10uF cap between Arduino UNO reset and ground
 
+When uploading sketch, make sure to:
+- Select `Tools > Board > ATMega328 on a breadboard (8 MHz internal clock)`
+- Select `Tools > Programmer > Arduino as ISP`
+- To upload, select `Sketch > Upload Using Programmer`
+- Connect 10uF cap between Arduino UNO reset and ground
+- Keep microcontroller plugged into the Arduino (if uploading using Arduino as ISP)
+- May have to power cycle the Arduino
+- Can use latest version of the Arduino IDE
+
 ## Contributions
 Carl Monk has built [his own version](http://fortoffee.org.uk/2014/12/word-clock-with-a-unicorn/) using a [Unicorn HAT](http://shop.pimoroni.com/products/unicorn-hat).
 
