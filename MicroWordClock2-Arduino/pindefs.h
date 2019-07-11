@@ -79,7 +79,6 @@
 #define PC4 A4
 #define PC5 A5
 
-
 #define PD0 0
 #define PD1 1
 #define PD2 2
@@ -87,4 +86,3 @@
 #define PD4 4
 #define PD5 5
 #define PD6 6
-#define PD7 7

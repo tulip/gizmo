@@ -1,11 +1,14 @@
 void setup() {
+
   for(int i=0;i<8;i++) {
     disp[i] = testdisp[i];
 
     // Set normal pins as outputs
     pinMode(cols[i],OUTPUT);
     pinMode(rows[i],OUTPUT);
-    digitalWrite(cols[i],COL_OFF);
+
+    // initially set cols as on (otherwise 2 and 3 don't work)
+    digitalWrite(cols[i],COL_ON);
     digitalWrite(rows[i],ROW_OFF);  
 
     // Set A6/A7 (XTAL pins) separately
@@ -80,6 +83,3 @@ void setup() {
   }
   //  //  Serial.begin(115200);
 }
-
-
-
