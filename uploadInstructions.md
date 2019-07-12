@@ -2,7 +2,7 @@
 - Download the latest version of the [Arduino IDE](https://www.arduino.cc/en/main/software)
 - `cd ~/Documents/Arduino && mkdir hardware`
 - cd into `hardware` clone [this repository](https://github.com/carlosefr/atmega) into it
-- Restart the Arduino IDE, you should see `Tools > Board > ATMega328 on a breadboard (8 MHz internal clock)` show up
+- Restart the Arduino IDE, you should see `Tools > Board > ATMega328` and some other things show up
 - Plug in the Arduino, select `Tools > Programmer > Arduino as ISP` and `Tools > Board > Arduino/Genuino Uno`
 - Select `File > Examples > ArduinoISP` and see a new script open
 - Make sure that the correct port is selected in `Tools > Port`
@@ -21,12 +21,14 @@
 | GND         | GND             |
 
 - Connect a 10uF capacitor between Arduino's RESET pin and GND
-- Select `Tools > Board > ATMega328 on a breadboard (8 MHz internal clock)`
+- Select `Tools > Board > ATmega328/328p`
+- Select `Tools > Processor > ATmega328p`
+- Select `Tools > Clock > Internal 8 MHz`
 - Select `Tools > Burn Bootloader`
 
 ## Uploading sketch
 - Open `MicroWordClock2-Arduino.ino` in Arduino IDE
-- With cap still plugged in, select `Sketch > Upload Using Programmer`
+- With cap still plugged in and same `Tools` settings as before, select `Sketch > Upload Using Programmer`
 - The TX and RX LEDs on the Arduino should start blinking, all LEDs on the Gizmo board should light up initially, then the board should be good to go
 
 ## Setting the time 
