@@ -33,7 +33,7 @@
 
 ## Setting the time 
 - Once the sketch is uploaded, unplug the Arduino, and plug in Gizmo's independent power supply
-- Hold down S1 until words start blinking. To cycle through "quarter past", "half past", etc., press SW1 the number of minutes you want to increment past the time designator
+- Hold down SW1 until words start blinking. To cycle through "quarter past", "half past", etc., press SW1 the number of minutes you want to increment past the time designator
 - To set the hour, hold down SW1 again until the current hour starts blinking and cycle through. Once you're done, hold down SW1 until only one LED blinks again
 
 ## Troubleshooting
