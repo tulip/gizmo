@@ -37,16 +37,7 @@ https://github.com/carlosefr/atmega (instructions inside)
 
 The ICSP header on the Micro Word Clock PCB is the standard layout described [here](http://www.atmel.com/images/doc0943.pdf) (Fig. 2).
 
-When burning bootloader, make sure to:
-- Connect 10uF cap between Arduino UNO reset and ground
-
-When uploading sketch, make sure to:
-- Select `Tools > Board > ATMega328 on a breadboard (8 MHz internal clock)`
-- Select `Tools > Programmer > Arduino as ISP`
-- To upload, select `Sketch > Upload Using Programmer`
-- Connect 10uF cap between Arduino UNO reset and ground
-- Keep microcontroller plugged into the Arduino (if uploading using Arduino as ISP)
-- May have to power cycle the Arduino
+See [upload instructions](uploadInstructions.md) for step-by-step on setting up Gizmo
 
 ## Contributions
 Carl Monk has built [his own version](http://fortoffee.org.uk/2014/12/word-clock-with-a-unicorn/) using a [Unicorn HAT](http://shop.pimoroni.com/products/unicorn-hat).
