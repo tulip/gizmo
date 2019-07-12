@@ -26,6 +26,9 @@ See the YouTube video [here](https://www.youtube.com/watch?v=9ko9CeylUTs).
 You will require an In-System Programmer (ISP) to write the firmware onto the microcontroller.
 
 ## Burning the bootloader and uploading the sketch
+
+[Full upload instructions](uploadInstructions.md)
+
 Please read these two tutorials if you are unfamiliar with burning a bootloader:
 - http://arduino.cc/en/Tutorial/ArduinoISP
 - http://arduino.cc/en/Tutorial/ArduinoToBreadboard
@@ -36,8 +39,6 @@ Please download Carlos Rodrigues' Barebones ATmega Chips board configuration fil
 https://github.com/carlosefr/atmega (instructions inside)
 
 The ICSP header on the Micro Word Clock PCB is the standard layout described [here](http://www.atmel.com/images/doc0943.pdf) (Fig. 2).
-
-See [upload instructions](uploadInstructions.md) for step-by-step on setting up Gizmo
 
 ## Contributions
 Carl Monk has built [his own version](http://fortoffee.org.uk/2014/12/word-clock-with-a-unicorn/) using a [Unicorn HAT](http://shop.pimoroni.com/products/unicorn-hat).
