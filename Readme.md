@@ -38,8 +38,6 @@ https://github.com/carlosefr/atmega (instructions inside)
 The ICSP header on the Micro Word Clock PCB is the standard layout described [here](http://www.atmel.com/images/doc0943.pdf) (Fig. 2).
 
 When burning bootloader, make sure to:
-- use Arduino 1.8.5 (this was what has worked so far)
-- After moving .zip file to `Arduino/hardware` and unzipping, find `boards.txt` and change the line `atmega328bb.bootloader.extended_fuses=0x05` from 0x05 to 0xfd and restart Arduino IDE
 - Connect 10uF cap between Arduino UNO reset and ground
 
 When uploading sketch, make sure to:
@@ -49,7 +47,6 @@ When uploading sketch, make sure to:
 - Connect 10uF cap between Arduino UNO reset and ground
 - Keep microcontroller plugged into the Arduino (if uploading using Arduino as ISP)
 - May have to power cycle the Arduino
-- Can use latest version of the Arduino IDE
 
 ## Contributions
 Carl Monk has built [his own version](http://fortoffee.org.uk/2014/12/word-clock-with-a-unicorn/) using a [Unicorn HAT](http://shop.pimoroni.com/products/unicorn-hat).
