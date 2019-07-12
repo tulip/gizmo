@@ -10,6 +10,7 @@
 
 ## Burning the Bootloader
 - Wire up the Arduino to Gizmo's ICSP header, but make sure to wire up power last (Gizmo has the standard ICSP header configuration). Use the following wiring:
+
 | Arduino pin | ICSP header pin |
 |-------------|-----------------|
 | 10          | RESET           |
@@ -18,6 +19,7 @@
 | 13          | SCK             |
 | 5 V         | VCC             |
 | GND         | GND             |
+
 - Connect a 10uF capacitor between Arduino's RESET pin and GND
 - Select `Tools > Board > ATMega328 on a breadboard (8 MHz internal clock)`
 - Select `Tools > Burn Bootloader`
