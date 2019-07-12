@@ -1,7 +1,7 @@
 ## Setting up the Arduino Uno as an ISP
 - Download the latest version of the [Arduino IDE](https://www.arduino.cc/en/main/software)
 - `cd ~/Documents/Arduino && mkdir hardware`
-- cd into `hardware` clone (this repository)[https://github.com/carlosefr/atmega] into it
+- cd into `hardware` clone [this repository](https://github.com/carlosefr/atmega) into it
 - Restart the Arduino IDE, you should see `Tools > Board > ATMega328 on a breadboard (8 MHz internal clock)` show up
 - Plug in the Arduino, select `Tools > Programmer > Arduino as ISP` and `Tools > Board > Arduino/Genuino Uno`
 - Select `File > Examples > ArduinoISP` and see a new script open
@@ -10,14 +10,7 @@
 
 ## Burning the Bootloader
 - Wire up the Arduino to Gizmo's ICSP header, but make sure to wire up power last (Gizmo has the standard ICSP header configuration). Use the following wiring:
-| Arduino pin | ICSP header pin |
-|-------------|-----------------|
-| 10          | RESET           |
-| 11          | MOSI            |
-| 12          | MISO            |
-| 13          | SCK             |
-| 5 V         | VCC             |
-| GND         | GND             |
+| Arduino pin | ICSP header pin |-------------|-----------------| 10          | RESET           | 11          | MOSI            | 12          | MISO            | 13          | SCK             | 5 V         | VCC             | GND         | GND             |
 - Connect a 10uF capacitor between Arduino's RESET pin and GND
 - Select `Tools > Board > ATMega328 on a breadboard (8 MHz internal clock)`
 - Select `Tools > Burn Bootloader`
