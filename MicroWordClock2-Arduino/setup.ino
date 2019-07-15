@@ -1,11 +1,14 @@
 void setup() {
+
   for(int i=0;i<8;i++) {
     disp[i] = testdisp[i];
 
     // Set normal pins as outputs
     pinMode(cols[i],OUTPUT);
     pinMode(rows[i],OUTPUT);
-    digitalWrite(cols[i],COL_OFF);
+
+    // initially set cols as on (otherwise 2 and 3 don't work)
+    digitalWrite(cols[i],COL_ON);
     digitalWrite(rows[i],ROW_OFF);  
 
     // Set A6/A7 (XTAL pins) separately
@@ -56,8 +59,8 @@ void setup() {
   TIMSK2 |= (1 << OCIE2A);
 
   // Uncomment following line to keep all LEDs on forever
-  if(digitalRead(PIN_BUTTON) == LOW)
-    while(true);
+//  if(digitalRead(PIN_BUTTON) == LOW)
+//    while(true);
 
   TCCR1A = 0;// set entire TCCR1A register to 0
   TCCR1B = 0;// same for TCCR1B
@@ -79,7 +82,5 @@ void setup() {
     rtc.adjust(DateTime(__DATE__, __TIME__));
   }
   //  //  Serial.begin(115200);
+
 }
-
-
-

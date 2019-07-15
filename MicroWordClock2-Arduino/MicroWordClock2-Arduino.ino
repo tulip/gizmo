@@ -1,4 +1,3 @@
-// Libraries
 #include <Wire.h>
 #include "RTClib.h"
 
