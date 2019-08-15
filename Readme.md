@@ -4,7 +4,9 @@
 - Download the latest version of the [Arduino IDE](https://www.arduino.cc/en/main/software)
 - `cd ~/Documents/Arduino && mkdir hardware`
 - cd into `hardware` clone [this repository](https://github.com/carlosefr/atmega) into it
-![Arduino folder in terminal](./images/duino_in_terminal.png)
+<p align="center">
+<img src=./images/duino_in_terminal.png width="25%">
+</p>
 - Restart the Arduino IDE, you should see `Tools > Board > ATMega328` and some other things show up
 
 ## Upload instructions with AVRISP MKII programmer
@@ -16,12 +18,16 @@
 - Select `Tools > Processor > ATmega328p`
 - Select `Tools > Clock > Internal 8 MHz`
 - Select `Tools > Burn Bootloader`
-![AVRISP Tools tab](./images/tools_tab_avrisp.png)
+<p align="center">
+<img src=./images/tools_tab_avrisp.png width="30%">
+</p>
 
 ##### Uploading sketch
 - Open `MicroWordClock2-Arduino.ino` in Arduino IDE
 - Select `Sketch > Upload Using Programmer`
-![Sketch tab](./images/sketch_tab.png)
+<p align="center">
+<img src=./images/sketch_tab.png width="30%">
+</p>
 
 ## Upload instructions with Arduino Uno
 
@@ -29,7 +35,10 @@
 - Plug in the Arduino, select `Tools > Programmer > Arduino as ISP` and `Tools > Board > Arduino/Genuino Uno`
 - Select `File > Examples > ArduinoISP` and see a new script open
 - Make sure that the correct port is selected in `Tools > Port`
-![Arduino as ISP Tools tab](./images/tools_tab_duino.png)
+<p align="center">
+<img src=./images/tools_tab_duino.png width="35%">
+</p>
+
 - On the top left corner of the window, select upload
 
 ##### Burning the Bootloader
