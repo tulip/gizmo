@@ -4,10 +4,10 @@
 - Download the latest version of the [Arduino IDE](https://www.arduino.cc/en/main/software)
 - `cd ~/Documents/Arduino && mkdir hardware`
 - cd into `hardware` clone [this repository](https://github.com/carlosefr/atmega) into it
+- Restart the Arduino IDE, you should see `Tools > Board > ATMega328` and some other things show up
 <p align="center">
 <img src=./images/duino_in_terminal.png width="25%">
 </p>
-- Restart the Arduino IDE, you should see `Tools > Board > ATMega328` and some other things show up
 
 ## Upload instructions with AVRISP MKII programmer
 
@@ -35,11 +35,10 @@
 - Plug in the Arduino, select `Tools > Programmer > Arduino as ISP` and `Tools > Board > Arduino/Genuino Uno`
 - Select `File > Examples > ArduinoISP` and see a new script open
 - Make sure that the correct port is selected in `Tools > Port`
-<p align="center">
-<img src=./images/tools_tab_duino.png width="35%">
-</p>
-
 - On the top left corner of the window, select upload
+<p align="center">
+<img src=./images/tools_tab_duino1.png width="35%">
+</p>
 
 ##### Burning the Bootloader
 - Wire up the Arduino to Gizmo's ICSP header, but make sure to wire up power last (Gizmo has the standard ICSP header configuration). Use the following wiring:
@@ -58,6 +57,9 @@
 - Select `Tools > Processor > ATmega328p`
 - Select `Tools > Clock > Internal 8 MHz`
 - Select `Tools > Burn Bootloader`
+<p align="center">
+<img src=./images/tools_tab_duino2.png width="35%">
+</p>
 
 ##### Uploading sketch
 - Open `MicroWordClock2-Arduino.ino` in Arduino IDE
