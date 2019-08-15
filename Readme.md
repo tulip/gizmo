@@ -1,56 +1,66 @@
 # Micro Word Clock v2
 
-## Description
-A tiny replica of the famous Word Clock, using only an ATmega microcontroller, a DS1307 Real Time Clock and a few passive components to display the time on an 8x8 LED matrix. The letters have been printed onto a transparent sheet and glued over the LEDs to produce a readable time.
-See the YouTube video [here](https://www.youtube.com/watch?v=9ko9CeylUTs).
+## Arduino IDE setup (must do for programming with AVRISP and Arduino)
+- Download the latest version of the [Arduino IDE](https://www.arduino.cc/en/main/software)
+- `cd ~/Documents/Arduino && mkdir hardware`
+- cd into `hardware` clone [this repository](https://github.com/carlosefr/atmega) into it
+![Arduino folder in terminal](./images/duino_in_terminal.png)
+- Restart the Arduino IDE, you should see `Tools > Board > ATMega328` and some other things show up
 
-## Directory structure
-- **MicroWordClock2-Arduino** contains the firmware, including pin definitions for the LED matrix and location of the words in each language.
-- **EAGLE** contains the schematic and PCB design files for the proejct.
-- **Graphics** contains the design for the transparency sheet to place over the LED matrix to form the words, designed in Inkscape. Contributions in more languages are welcome!
+## Upload instructions with AVRISP MKII programmer
 
-## Bill of Materials
+##### Burning the bootloader
+- Plug in the AVRISP, select `Tools > Programmer > AVRISP mkII`
+- Plug in ICSP header from AVRISP to ICSP header on Gizmo (ICSP labels on Gizmo are on back of board)
+- Select `Tools > Board > ATmega328/328p`
+- Select `Tools > Processor > ATmega328p`
+- Select `Tools > Clock > Internal 8 MHz`
+- Select `Tools > Burn Bootloader`
+![AVRISP Tools tab](./images/tools_tab_avrisp.png)
 
-|            | Part name          | Package size                 | [Reichelt](www.reichelt.de) part number                                                                                        |
-|------------|--------------------|------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| IC1        | ATmega328P-AU      | TQFP-32                      | ATMEGA 328P-AU                                                                                                                 |
-| IC2        | DS1307Z+           | SO-8                         | DS 1307Z                                                                                                                       |
-| C1         | 220nF ceramic      | 2012 metric / 0805 imperial  | X7R-G0805 0,22µ                                                                                                                |
-| C2         | 2.2uF tantalum     | 3528 metric / B-case         | SMD TAN.2,2/20                                                                                                                 |
-| S1         | SMD push button    | 6.2x6.5mm                    | TASTER 9314                                                                                                                    |
-| XTAL       | 32.768 kHz crystal | 3216 metric / 1206 imperial  | 32,768 CC7V-12,5                                                                                                               |
-| LED matrix | 8x8 matrix         | 20x20mm                      | [GYXM-788ASR](http://eud.dx.com/product/lson-788-8-x-8-red-led-display-dot-matrix-module-black-white-844302671)* (DealExtreme) |
-| PCB        |                    | 20x20mm                      | [OshPark](https://oshpark.com/shared_projects/NkANAgow)                                                                        |
-\* Probably any LED matrix labeled 788 should work.
+##### Uploading sketch
+- Open `MicroWordClock2-Arduino.ino` in Arduino IDE
+- Select `Sketch > Upload Using Programmer`
+![Sketch tab](./images/sketch_tab.png)
 
-You will require an In-System Programmer (ISP) to write the firmware onto the microcontroller.
+## Upload instructions with Arduino Uno
 
-## Burning the bootloader and uploading the sketch
+##### Setting up the Arduino Uno as an ISP
+- Plug in the Arduino, select `Tools > Programmer > Arduino as ISP` and `Tools > Board > Arduino/Genuino Uno`
+- Select `File > Examples > ArduinoISP` and see a new script open
+- Make sure that the correct port is selected in `Tools > Port`
+![Arduino as ISP Tools tab](./images/tools_tab_duino.png)
+- On the top left corner of the window, select upload
 
-[Full upload instructions](uploadInstructions.md)
+##### Burning the Bootloader
+- Wire up the Arduino to Gizmo's ICSP header, but make sure to wire up power last (Gizmo has the standard ICSP header configuration). Use the following wiring:
 
-Please read these two tutorials if you are unfamiliar with burning a bootloader:
-- http://arduino.cc/en/Tutorial/ArduinoISP
-- http://arduino.cc/en/Tutorial/ArduinoToBreadboard
+| Arduino pin | ICSP header pin |
+|-------------|-----------------|
+| 10          | RESET           |
+| 11          | MOSI            |
+| 12          | MISO            |
+| 13          | SCK             |
+| 5 V         | VCC             |
+| GND         | GND             |
 
-The required procedure is the one described as "AVR on a breadboard" and "Minimal circuit", respectively, as there is no external crystal attached to the microcontroller.
+- Connect a 10uF capacitor between Arduino's RESET pin and GND
+- Select `Tools > Board > ATmega328/328p`
+- Select `Tools > Processor > ATmega328p`
+- Select `Tools > Clock > Internal 8 MHz`
+- Select `Tools > Burn Bootloader`
 
-Please download Carlos Rodrigues' Barebones ATmega Chips board configuration file:
-https://github.com/carlosefr/atmega (instructions inside)
+##### Uploading sketch
+- Open `MicroWordClock2-Arduino.ino` in Arduino IDE
+- With cap still plugged in and same `Tools` settings as before, select `Sketch > Upload Using Programmer`
+- The TX and RX LEDs on the Arduino should start blinking, all LEDs on the Gizmo board should light up initially, then the board should be good to go
 
-The ICSP header on the Micro Word Clock PCB is the standard layout described [here](http://www.atmel.com/images/doc0943.pdf) (Fig. 2).
+##### Troubleshooting 
+- Make sure the correct option is selected under `Tools > Board` - should be Arduino Uno only when uploading ISP sketch
+- Make sure the connections to the 10uF cap are good - I plugged it into a breadboard and used jumper wires to connect
+- If nothing's working, try power cycling
 
-## Contributions
-Carl Monk has built [his own version](http://fortoffee.org.uk/2014/12/word-clock-with-a-unicorn/) using a [Unicorn HAT](http://shop.pimoroni.com/products/unicorn-hat).
-
-[quistoph](https://github.com/qistoph) has made a Dutch layout.
-
-Tanguy Rewers independently came up with an alternative Dutch layout (labeled as dutch2).
-
-## Featured on
-- [Hackaday](http://hackaday.com/2014/11/29/micro-word-clock/)
-- [Gizmodo](http://gizmodo.com/build-a-tiny-version-of-those-pricey-word-clocks-on-the-1665134624)
-- [The Atmel Blog](http://blog.atmel.com/2014/12/01/build-your-own-micro-word-clock-with-an-atmega328p/)
-
-## License
-This project (both software and hardware) is published under a [Creative Commons BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/).
+## Setting the time 
+- Once the sketch is uploaded, unplug the Arduino/programmer and plug in Gizmo's independent power supply
+- Hold down SW1 until words start blinking. To cycle through "quarter past", "half past", etc., press SW1 the number of minutes you want to increment past the time designator
+- To set the hour, hold down SW1 again until the current hour starts blinking and cycle through. Once you're done, hold down SW1 until only one LED blinks again
