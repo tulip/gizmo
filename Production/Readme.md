@@ -8,7 +8,7 @@ You should type the following to program it:
 From the top level directory, navigate to the hex file in the production folder: 
 `cd Micro-Word-Clock/Production`
 
-Then, connect everything according to the [OTHER README's](linkssss) instructions. Once everything is connected, you can run the following: 
+Then, connect everything according to the [Top Level Readme](https://github.com/tulip/gizmo) instructions. Once everything is connected, you can run the following: 
 `avrdude -c avrispmkII -p ATmega328P -e -U flash:w:MicroWordClock2-Arduino.ino.hex`
 
 ### Expected Behavior
@@ -26,7 +26,7 @@ You should be able to tell your gizmo has flashed correctly if you can perform t
 
 This script is meant to be used on a Tulip Gateway. The gateway should be in the following configuration:
 - The gateway should be authenticated so that it will have the correct time. 
-- The gateway should have IO500A and IO500B removed and IO501A and IO501B added. Otherwise it will not work.
+- **The gateway should have IO500A and IO500B removed and IO501A and IO501B added. Otherwise it will not work.** See page 12 of the gateway schematic included in this directory.
 - You should plug the RTC into the following pins. Note that the gateway pins numbers refer to the ones in silk on the gateway.
 
 | Gateway Pin | RTC Pin |
@@ -36,7 +36,6 @@ This script is meant to be used on a Tulip Gateway. The gateway should be in the
 | GPIOA - 4   | PWR     | 
 | OUTPUT- GND | GND     |
 
-[INSERT PICTURES OF GATEWAY SETUP](linkssss)
 
 ### How to Program the RTC
 Pre-conditions:
