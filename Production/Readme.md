@@ -1,8 +1,8 @@
 # Production Tools for Gizmo
 
-### Using the Hex File
+## Using the Hex File
 
-## Uploading the Hex File Using `avrdude`
+### Uploading the Hex File Using `avrdude`
 
 You should type the following to program it:
 From the top level directory, navigate to the hex file in the production folder: 
@@ -11,7 +11,7 @@ From the top level directory, navigate to the hex file in the production folder:
 Then, connect everything according to the [OTHER README's](linkssss) instructions. Once everything is connected, you can run the following: 
 `avrdude -c avrispmkII -p ATmega328P -e -U flash:w:MicroWordClock2-Arduino.ino.hex`
 
-## Expected Behavior
+### Expected Behavior
 You should be able to tell your gizmo has flashed correctly if you can perform the following tasks:
 | Test        | Description 	|
 |-------------|-----------------| 
@@ -22,9 +22,9 @@ You should be able to tell your gizmo has flashed correctly if you can perform t
 | RTC Works | RTC time persists after a restart | 
 
 
-### RTC Programmer
+## RTC Programmer
 
-## How to Connect the RTC to the Gateway
+### How to Connect the RTC to the Gateway
 
 This script is meant to be used on a Tulip Gateway. The gateway should be in the following configuration:
 - The gateway should be authenticated so that it will have the correct time. 
@@ -35,19 +35,19 @@ This script is meant to be used on a Tulip Gateway. The gateway should be in the
 |-------------|---------|
 | GPIOA - 1   | SCL     |
 | GPIOA - 2   | SDA     |
-| GPIOA - 4   | PWR     |
+| GPIOA - 4   | PWR     | 
 | OUTPUT- GND | GND     |
 
 [INSERT PICTURES OF GATEWAY SETUP](linkssss)
 
-## How to Program the RTC
+### How to Program the RTC
 Pre-conditions:
 - You have the `ProgramRTC.sh` program on the gateway
 - You have changed `ProgramRTC.sh` to an executable: `chmod +x ProgramRTC.sh`
 - You are logged in as the `root` user.
 - You have connected the RTC to the gateway following the above instructions.
 
-**Confirm that the RTC is Plugged in Correctly** 
+## Confirm that the RTC is Plugged in Correctly
 
 Run `i2cdetect -r -y 1`
 
@@ -65,10 +65,10 @@ Run `i2cdetect -r -y 1`
 
 Note the 68! If you don't have this your RTC is plugged in incorrectly. 
 
-**Confirm the Date**
+## Confirm the Date
 Make sure that the date is what you expect it to be by running `date`
 
-**Program the RTC!**
+## Program the RTC!
 If everything looks good, you will want to run `./ProgramRTC.sh`
 
 It will output a bunch of text which you can read through to debug. Now you should be able to plug in your RTC to the Gizmo! It is accurate to the second! 
