@@ -32,7 +32,9 @@ one=`get_byte $minutes`
 two=`get_byte $hours`
 three=`get_byte $day_w`
 four=`get_byte $day_m`
-five=`get_byte $month`
+century_byte=`get_byte $year_century`
+century_byte_shift=$((year_century << 7))
+five=$((century_byte_shift | $month_byte)) #century and month share a register
 six=`get_byte $year`
 
 # Set GPIOA_0 and GPIOA_1 to INPUT and GPIOA_2 to GPIO_7 to OUTPUT
@@ -56,8 +58,8 @@ i2cset -f -y 1 0x68 0x03 $three
 #Program the Day of the Month
 i2cset -f -y 1 0x68 0x04 $four
 
-#Program the Month
-#i2cset -f -y 1 0x68 0x05 $five
+#Program the Century and Month 
+i2cset -f -y 1 0x68 0x05 $five
 
 #Program the Year
 i2cset -f -y 1 0x68 0x06 $six
