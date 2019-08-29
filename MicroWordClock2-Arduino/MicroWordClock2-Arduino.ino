@@ -9,8 +9,8 @@
 #include "english.h" // exchange this for the language you need
 boolean blink_enable = true;
 boolean blinknow = false;
-#define FREQ_DISPLAY 1000 // Hz
-#define FREQ_TIMEUPDATE 2 // Hz
+#define FREQ_DISPLAY 490 // Hz
+#define FREQ_TIMEUPDATE  490 // Hz
 //unsigned long check_interval = 500; // time update rate
 //#define refresh_rate 2560 // display refresh rate in microseconds
 
@@ -77,8 +77,8 @@ void loop() {
     else { // button was released
       buttonHandled = true;
       unsigned long buttonDelay = millis() - buttonMillis;
-      if(buttonDelay > 100) { // debounce
-        if(buttonDelay < 1000) { // simple press
+      if(buttonDelay > 01) { // debounce
+        if(buttonDelay < 750) { // simple press
           updatenow = true;
           switch(clockmode) {
           case NORMAL:
@@ -139,10 +139,12 @@ void prepareDisplay() {
   FOR_ALLROWS {
     disp[r]=B00000000;
     FOR_ALLCOLS {
-      if((clockmode != SET_MIN || !blinknow))
-        disp[r] |= minutes[disp_min][r] & (B10000000 >> c);
-      if((clockmode != SET_HRS || !blinknow))
-        disp[r] |= hours  [disp_hrs][r] & (B10000000 >> c);
+      if(rtc.isrunning()){
+        if((clockmode != SET_MIN || !blinknow))
+          disp[r] |= minutes[disp_min][r] & (B10000000 >> c);
+        if((clockmode != SET_HRS || !blinknow))
+          disp[r] |= hours  [disp_hrs][r] & (B10000000 >> c);
+      }
       if(clockmode == NORMAL && blink_enable && !blinknow)
         disp[r] |= blinky[r];
     }
