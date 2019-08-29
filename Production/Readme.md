@@ -1,77 +1,80 @@
-# Micro Word Clock v2
+# Production Tools for Gizmo
 
-## Arduino IDE setup (must do for programming with AVRISP and Arduino)
-- Download the latest version of the [Arduino IDE](https://www.arduino.cc/en/main/software)
-- `cd ~/Documents/Arduino && mkdir hardware`
-- cd into `hardware` clone [this repository](https://github.com/carlosefr/atmega) into it
-- Restart the Arduino IDE, you should see `Tools > Board > ATMega328` and some other things show up
-<p align="center">
-<img src=./images/duino_in_terminal.png width="25%">
-</p>
+### Using the Hex File
 
-## Upload instructions with AVRISP MKII programmer
+## Uploading the Hex File Using `avrdude`
 
-##### Burning the bootloader
-- Plug in the AVRISP, select `Tools > Programmer > AVRISP mkII`
-- Plug in ICSP header from AVRISP to ICSP header on Gizmo (ICSP labels on Gizmo are on back of board)
-- Select `Tools > Board > ATmega328/328p`
-- Select `Tools > Processor > ATmega328p`
-- Select `Tools > Clock > Internal 8 MHz`
-- Select `Tools > Burn Bootloader`
-<p align="center">
-<img src=./images/tools_tab_avrisp.png width="30%">
-</p>
+You should type the following to program it:
+From the top level directory, navigate to the hex file in the production folder: 
+`cd Micro-Word-Clock/Production`
 
-##### Uploading sketch
-- Open `MicroWordClock2-Arduino.ino` in Arduino IDE
-- Select `Sketch > Upload Using Programmer`
-<p align="center">
-<img src=./images/sketch_tab.png width="30%">
-</p>
+Then, connect everything according to the [OTHER README's](linkssss) instructions. Once everything is connected, you can run the following: 
+`avrdude -c avrispmkII -p ATmega328P -e -U flash:w:MicroWordClock2-Arduino.ino.hex`
 
-## Upload instructions with Arduino Uno
+## Expected Behavior
+You should be able to tell your gizmo has flashed correctly if you can perform the following tasks:
+| Test        | Description 	|
+|-------------|-----------------| 
+| No flicker | Watch for 1min and see no flicker | 
+| MCU HB | Blinks first tulip something to confirm MCUs are programmed correctly - this is also the behavior of a broken/not-programmed RTC | 
+| Minutes Program | Long hold makes the minute value blink. Each minute is a press, so pressing 5 times should change the value of the minute. |
+| Hours Program | Long hold makes the minute value blink. Another long hold makes the hours blink. Long hold will set it, press quickly to change numbers. |
+| RTC Works | RTC time persists after a restart | 
 
-##### Setting up the Arduino Uno as an ISP
-- Plug in the Arduino, select `Tools > Programmer > Arduino as ISP` and `Tools > Board > Arduino/Genuino Uno`
-- Select `File > Examples > ArduinoISP` and see a new script open
-- Make sure that the correct port is selected in `Tools > Port`
-- On the top left corner of the window, select upload
-<p align="center">
-<img src=./images/tools_tab_duino1.png width="35%">
-</p>
 
-##### Burning the Bootloader
-- Wire up the Arduino to Gizmo's ICSP header, but make sure to wire up power last (Gizmo has the standard ICSP header configuration). Use the following wiring:
+### RTC Programmer
 
-| Arduino pin | ICSP header pin |
-|-------------|-----------------|
-| 10          | RESET           |
-| 11          | MOSI            |
-| 12          | MISO            |
-| 13          | SCK             |
-| 5 V         | VCC             |
-| GND         | GND             |
+## How to Connect the RTC to the Gateway
 
-- Connect a 10uF capacitor between Arduino's RESET pin and GND
-- Select `Tools > Board > ATmega328/328p`
-- Select `Tools > Processor > ATmega328p`
-- Select `Tools > Clock > Internal 8 MHz`
-- Select `Tools > Burn Bootloader`
-<p align="center">
-<img src=./images/tools_tab_duino2.png width="35%">
-</p>
+This script is meant to be used on a Tulip Gateway. The gateway should be in the following configuration:
+- The gateway should be authenticated so that it will have the correct time. 
+- The gateway should have IO500A and IO500B removed and IO501A and IO501B added. Otherwise it will not work.
+- You should plug the RTC into the following pins. Note that the gateway pins numbers refer to the ones in silk on the gateway.
 
-##### Uploading sketch
-- Open `MicroWordClock2-Arduino.ino` in Arduino IDE
-- With cap still plugged in and same `Tools` settings as before, select `Sketch > Upload Using Programmer`
-- The TX and RX LEDs on the Arduino should start blinking, all LEDs on the Gizmo board should light up initially, then the board should be good to go
+| Gateway Pin | RTC Pin |
+|-------------|---------|
+| GPIOA - 1   | SCL     |
+| GPIOA - 2   | SDA     |
+| GPIOA - 4   | PWR     |
+| OUTPUT- GND | GND     |
 
-##### Troubleshooting 
-- Make sure the correct option is selected under `Tools > Board` - should be Arduino Uno only when uploading ISP sketch
-- Make sure the connections to the 10uF cap are good - I plugged it into a breadboard and used jumper wires to connect
-- If nothing's working, try power cycling
+[INSERT PICTURES OF GATEWAY SETUP](linkssss)
 
-## Setting the time 
-- Once the sketch is uploaded, unplug the Arduino/programmer and plug in Gizmo's independent power supply
-- Hold down SW1 until words start blinking. To cycle through "quarter past", "half past", etc., press SW1 the number of minutes you want to increment past the time designator
-- To set the hour, hold down SW1 again until the current hour starts blinking and cycle through. Once you're done, hold down SW1 until only one LED blinks again
+## How to Program the RTC
+Pre-conditions:
+- You have the `ProgramRTC.sh` program on the gateway
+- You have changed `ProgramRTC.sh` to an executable: `chmod +x ProgramRTC.sh`
+- You are logged in as the `root` user.
+- You have connected the RTC to the gateway following the above instructions.
+
+**Confirm that the RTC is Plugged in Correctly** 
+
+Run `i2cdetect -r -y 1`
+
+```
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: 20 21 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- 48 -- -- -- -- -- -- --
+50: 50 -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- 68 -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- -- 
+```
+
+Note the 68! If you don't have this your RTC is plugged in incorrectly. 
+
+**Confirm the Date**
+Make sure that the date is what you expect it to be by running `date`
+
+**Program the RTC!**
+If everything looks good, you will want to run `./ProgramRTC.sh`
+
+It will output a bunch of text which you can read through to debug. Now you should be able to plug in your RTC to the Gizmo! It is accurate to the second! 
+
+
+
+
+
+

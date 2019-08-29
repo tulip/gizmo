@@ -12,12 +12,16 @@
 ## Upload instructions with AVRISP MKII programmer
 
 ##### Burning the bootloader
+- Plug in the Gizmo so that it is powered externally - the AVRISP MKII will **not** work if it is not powered externally
 - Plug in the AVRISP, select `Tools > Programmer > AVRISP mkII`
 - Plug in ICSP header from AVRISP to ICSP header on Gizmo (ICSP labels on Gizmo are on back of board)
 - Select `Tools > Board > ATmega328/328p`
 - Select `Tools > Processor > ATmega328p`
 - Select `Tools > Clock > Internal 8 MHz`
+- If everything is good, you should see a green light at the bottom of the programmer.
 - Select `Tools > Burn Bootloader`
+- If the programmer is working, you should see a second green light flash as it is programming. 
+
 <p align="center">
 <img src=./images/tools_tab_avrisp.png width="30%">
 </p>
