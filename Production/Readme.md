@@ -13,13 +13,11 @@ Then, connect everything according to the [OTHER README's](linkssss) instruction
 
 ### Expected Behavior
 You should be able to tell your gizmo has flashed correctly if you can perform the following tasks:
-| Test        | Description 	|
-|-------------|-----------------| 
-| No flicker | Watch for 1min and see no flicker | 
-| MCU HB | Blinks first tulip something to confirm MCUs are programmed correctly - this is also the behavior of a broken/not-programmed RTC | 
-| Minutes Program | Long hold makes the minute value blink. Each minute is a press, so pressing 5 times should change the value of the minute. |
-| Hours Program | Long hold makes the minute value blink. Another long hold makes the hours blink. Long hold will set it, press quickly to change numbers. |
-| RTC Works | RTC time persists after a restart | 
+- **No Flicker** - Watch for 1min and see no flicker
+- **MCU HB** - Blinks first tulip something to confirm MCUs are programmed correctly - this is also the behavior of a broken/not-programmed RTC
+- **Minutes Good** - Long hold makes the minute value blink. Each minute is a press, so pressing 5 times should change the value of the minute.
+- **Hours Good** - Long hold makes the minute value blink. Another long hold makes the hours blink. Will program - long hold will set it, press quickly to change numbers. 
+- **RTC Good** - RTC time persists after a restart
 
 
 ## RTC Programmer
@@ -47,10 +45,11 @@ Pre-conditions:
 - You are logged in as the `root` user.
 - You have connected the RTC to the gateway following the above instructions.
 
-## Confirm that the RTC is Plugged in Correctly
+### Confirm that the RTC is Plugged in Correctly
 
 Run `i2cdetect -r -y 1`
 
+You should see the following:
 ```
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:          -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -65,14 +64,26 @@ Run `i2cdetect -r -y 1`
 
 Note the 68! If you don't have this your RTC is plugged in incorrectly. 
 
-## Confirm the Date
+### Confirm the Date
 Make sure that the date is what you expect it to be by running `date`
 
-## Program the RTC!
+### Program the RTC!
 If everything looks good, you will want to run `./ProgramRTC.sh`
 
 It will output a bunch of text which you can read through to debug. Now you should be able to plug in your RTC to the Gizmo! It is accurate to the second! 
 
+## Notes on i2cset
+This programmer works mostly via the command `i2cset`.
+
+A quick example of what is happening: 
+`i2cset -f -y 1 0x68 0x00 0x01`
+`i2cset -force -no-interactive i2caddress chipaddress value`
+
+- `-f` forces `i2cset` to set a value
+- `-y` turns off interactive mode because this is inside a script 
+- `0x68` is the i2c address on the gateway (which you can find by using the `i2cdetect` command)
+- `0x00` is the address on the chip you're writing to. You will need to reference the [DS3231's datasheet](https://datasheets.maximintegrated.com/en/ds/DS3231.pdf). On page 11 you will see that the the address 00h corresponds to the "Seconds" of the RTC.
+- This in sum, means that you are writing it is 1 seconds (0x01) to the  address for seconds (0x00) of the DS3231 which is located at the 0x68 address of the i2cbus on th gateway.
 
 
 
