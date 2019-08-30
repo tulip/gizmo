@@ -139,12 +139,10 @@ void prepareDisplay() {
   FOR_ALLROWS {
     disp[r]=B00000000;
     FOR_ALLCOLS {
-      if(rtc.isrunning()){
-        if((clockmode != SET_MIN || !blinknow))
+      if((clockmode != SET_MIN || !blinknow))
           disp[r] |= minutes[disp_min][r] & (B10000000 >> c);
-        if((clockmode != SET_HRS || !blinknow))
-          disp[r] |= hours  [disp_hrs][r] & (B10000000 >> c);
-      }
+      if((clockmode != SET_HRS || !blinknow))
+          disp[r] |= hours  [disp_hrs][r] & (B10000000 >> c); 
       if(clockmode == NORMAL && blink_enable && !blinknow)
         disp[r] |= blinky[r];
     }
