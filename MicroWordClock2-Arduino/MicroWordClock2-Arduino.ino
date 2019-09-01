@@ -1,5 +1,7 @@
 #include <Wire.h>
 #include "RTClib.h"
+#include "Time.h"
+
 
 // Local includes
 #include "pindefs.h"
@@ -7,8 +9,8 @@
 
 // Customizable options
 #include "english.h" // exchange this for the language you need
-boolean blink_enable = true;
-boolean blinknow = false;
+boolean blink_enable = false;
+boolean blinknow = true;
 #define FREQ_DISPLAY 490 // Hz
 #define FREQ_TIMEUPDATE  490 // Hz
 //unsigned long check_interval = 500; // time update rate
@@ -63,9 +65,15 @@ boolean buttonHandled = true;
 
 void loop() {
   if(updatenow) {
-    updateTime();
+    if(rtc.isrunning()){
+      updateTime();
+    }
     prepareDisplay();
     updatenow = false;
+  }
+  
+  if(!rtc.isrunning() && clockmode != SET_MIN && clockmode != SET_HRS){
+    blink_enable = true;
   }
 
   if(digitalRead(PIN_BUTTON) != buttonState) {
@@ -88,11 +96,17 @@ void loop() {
             break;
           case SET_MIN:
             rtc.adjust(rtc.now().unixtime() + 1*60);
+            if(rtc.isrunning()){
+              adjustTime(60);
+            }
             blinknow = true;
             TCNT1 = 0;
             break;
           case SET_HRS:
             rtc.adjust(rtc.now().unixtime() + 1*60*60);
+            if(rtc.isrunning()){
+              adjustTime(60*60);
+            }
             blinknow = true;
             TCNT1 = 0;
             break;
