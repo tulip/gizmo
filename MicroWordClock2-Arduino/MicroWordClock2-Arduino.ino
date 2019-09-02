@@ -65,9 +65,7 @@ boolean buttonHandled = true;
 
 void loop() {
   if(updatenow) {
-    if(rtc.isrunning()){
-      updateTime();
-    }
+    updateTime();
     prepareDisplay();
     updatenow = false;
   }
@@ -95,18 +93,18 @@ void loop() {
             TCNT1 = 0;
             break;
           case SET_MIN:
+            if(rtc.isrunning())
             rtc.adjust(rtc.now().unixtime() + 1*60);
-            if(rtc.isrunning()){
+            else
               adjustTime(60);
-            }
             blinknow = true;
             TCNT1 = 0;
             break;
           case SET_HRS:
+            if(rtc.isrunning())
             rtc.adjust(rtc.now().unixtime() + 1*60*60);
-            if(rtc.isrunning()){
+            else
               adjustTime(60*60);
-            }
             blinknow = true;
             TCNT1 = 0;
             break;
@@ -134,12 +132,20 @@ void loop() {
 void updateTime() {
   // Adjust 2.5 minutes = 150 seconds forward
   // So at 12:03 it already reads "five past 12"
+
   DateTime now = rtc.now().unixtime() + 150;
 
-  disp_sec = now.second();
-  disp_min = now.minute();
-  disp_hrs = now.hour();
-
+  if(rtc.isrunning()){
+    disp_sec = now.second();
+    disp_min = now.minute();
+    disp_hrs = now.hour();
+  }
+  else{
+    disp_sec = second();
+    disp_min = minute();
+    disp_hrs = hour();
+  }
+    
   disp_min /= 5;
 
   if(disp_min >= min_offset)
