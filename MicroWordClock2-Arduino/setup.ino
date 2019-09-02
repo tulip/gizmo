@@ -1,3 +1,5 @@
+
+
 void setup() {
 
   for(int i=0;i<8;i++) {
@@ -77,10 +79,9 @@ void setup() {
 
   Wire.begin();
   rtc.begin();
-  if (!rtc.isrunning() || false) {
-    //clockmode = NOT_SET;
-    rtc.adjust(DateTime(__DATE__, __TIME__));
-  }
+//  if (!rtc.isrunning() || false) {
+////    rtc.adjust(DateTime(__DATE__, __TIME__));
+//  }
   //  //  Serial.begin(115200);
 
 }

@@ -1,6 +1,6 @@
 #include <Wire.h>
 #include "RTClib.h"
-#include "Time.h"
+#include "TimeLib.h"
 
 
 // Local includes
@@ -9,8 +9,9 @@
 
 // Customizable options
 #include "english.h" // exchange this for the language you need
-boolean blink_enable = false;
-boolean blinknow = true;
+boolean blink_enable = true;
+boolean blinknow = false;
+boolean setonce = false;
 #define FREQ_DISPLAY 490 // Hz
 #define FREQ_TIMEUPDATE  490 // Hz
 //unsigned long check_interval = 500; // time update rate
@@ -27,7 +28,9 @@ enum ClockMode {
   SET_HRS,
   END,
 };
+
 ClockMode clockmode = NORMAL;
+
 
 volatile char disp[8]={
   0B11111111,
@@ -69,16 +72,16 @@ void loop() {
     prepareDisplay();
     updatenow = false;
   }
-  
-  if(!rtc.isrunning() && clockmode != SET_MIN && clockmode != SET_HRS){
-    blink_enable = true;
-  }
 
+  if(!rtc.isrunning() && !setonce){
+    clockmode = SET_HRS;
+  }
   if(digitalRead(PIN_BUTTON) != buttonState) {
     buttonState = digitalRead(PIN_BUTTON);
     if(buttonState == LOW) { // button was pressed
       buttonMillis = millis();
       buttonHandled = false;
+      setonce = true;
     }
     else { // button was released
       buttonHandled = true;
@@ -94,7 +97,7 @@ void loop() {
             break;
           case SET_MIN:
             if(rtc.isrunning())
-            rtc.adjust(rtc.now().unixtime() + 1*60);
+              rtc.adjust(rtc.now().unixtime() + 1*60);
             else
               adjustTime(60);
             blinknow = true;
@@ -102,7 +105,7 @@ void loop() {
             break;
           case SET_HRS:
             if(rtc.isrunning())
-            rtc.adjust(rtc.now().unixtime() + 1*60*60);
+              rtc.adjust(rtc.now().unixtime() + 1*60*60);
             else
               adjustTime(60*60);
             blinknow = true;
@@ -132,10 +135,9 @@ void loop() {
 void updateTime() {
   // Adjust 2.5 minutes = 150 seconds forward
   // So at 12:03 it already reads "five past 12"
-
-  DateTime now = rtc.now().unixtime() + 150;
-
+  
   if(rtc.isrunning()){
+    DateTime now = rtc.now().unixtime() + 150;
     disp_sec = now.second();
     disp_min = now.minute();
     disp_hrs = now.hour();
