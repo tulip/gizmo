@@ -15,10 +15,13 @@ Then, connect everything according to the [Top Level Readme](https://github.com/
 You should be able to tell your gizmo has flashed correctly if you can perform the following tasks:
 - **No Flicker** - Watch for 1min and see no flicker
 - **MCU HB** - Blinks first tulip something to confirm MCUs are programmed correctly - this is also the behavior of a broken/not-programmed RTC
-- **Minutes Good** - Long hold makes the minute value blink. Each minute is a press, so pressing 5 times should change the value of the minute.
-- **Hours Good** - Long hold makes the minute value blink. Another long hold makes the hours blink. Will program - long hold will set it, press quickly to change numbers. 
+- **Minutes Good** - Long button press (>2s)  the minute value blink. Each minute is a press, so pressing 5 times should change the value of the minute.
+- **Hours Good** - Long button press (>2s) makes the minute value blink. Another long hold makes the hours blink. Will program - long hold will set it, press quickly to change numbers. 
 - **RTC Good** - RTC time persists after a restart
+- **NO RTC Programmable** - If there is no RTC, will initialize as blinking"TWELVE" and still be able to be set normally. Should keep time normally. 
+- **ADD RTC OK** - Adding a known good RTC should immediately switch the time to the time programmed on the RTC.
 
+NOTE: No RTC hot unplugging! Hot unplugging can induce a complete reset of the RTC. This behavior can be replicated in the original code and seems to occur after multiple hot unplugs. If you need to remove the RTC, unplug the device completely and then remove the RTC.
 
 ## RTC Programmer
 

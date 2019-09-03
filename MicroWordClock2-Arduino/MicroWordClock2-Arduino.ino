@@ -14,8 +14,6 @@ boolean blinknow = false;
 boolean setonce = false;
 #define FREQ_DISPLAY 490 // Hz
 #define FREQ_TIMEUPDATE  490 // Hz
-//unsigned long check_interval = 500; // time update rate
-//#define refresh_rate 2560 // display refresh rate in microseconds
 
 volatile int cols[]={ // PC0,PD4,PB6!,PB3,PD5,PB4,PC2,PC3
   MTX_COL1,MTX_COL2,MTX_COL3,MTX_COL4,MTX_COL5,MTX_COL6,MTX_COL7,MTX_COL8}; // ON=LOW

@@ -79,9 +79,5 @@ void setup() {
 
   Wire.begin();
   rtc.begin();
-//  if (!rtc.isrunning() || false) {
-////    rtc.adjust(DateTime(__DATE__, __TIME__));
-//  }
-  //  //  Serial.begin(115200);
 
 }
