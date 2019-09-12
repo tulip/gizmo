@@ -10,7 +10,7 @@
 // Customizable options
 #include "english.h" // exchange this for the language you need
 boolean blink_enable = true;
-boolean blinknow = false;
+boolean blinknow = true;
 boolean setonce = false;
 #define FREQ_DISPLAY 490 // Hz
 #define FREQ_TIMEUPDATE  490 // Hz
@@ -66,6 +66,9 @@ boolean buttonHandled = true;
 
 void loop() {
   if(updatenow) {
+    if (rtc.isrunning()) {
+      TCNT1 = 0;
+    }
     updateTime();
     prepareDisplay();
     updatenow = false;
@@ -133,7 +136,6 @@ void loop() {
 void updateTime() {
   // Adjust 2.5 minutes = 150 seconds forward
   // So at 12:03 it already reads "five past 12"
-  TCNT1 = 0;
   
   if(rtc.isrunning()){
     DateTime now = rtc.now().unixtime() + 150;
@@ -156,6 +158,7 @@ void updateTime() {
 }
 
 void prepareDisplay() {
+  
   blinknow = !blinknow;
   FOR_ALLROWS {
     disp[r]=B00000000;
