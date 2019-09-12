@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.0">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1281,7 +1281,7 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </class>
 </classes>
 <parts>
-<part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="SMD-STRAIGHT-ALT-FEMALE" package3d_urn="urn:adsk.eagle:package:38148/1"/>
+<part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="SMD-STRAIGHT-FEMALE" package3d_urn="urn:adsk.eagle:package:38144/1"/>
 <part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="SMD-STRAIGHT-FEMALE" package3d_urn="urn:adsk.eagle:package:38144/1"/>
 <part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="SMD-STRAIGHT-FEMALE" package3d_urn="urn:adsk.eagle:package:38144/1"/>
 <part name="J4" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="SMD-STRAIGHT-FEMALE" package3d_urn="urn:adsk.eagle:package:38144/1"/>
