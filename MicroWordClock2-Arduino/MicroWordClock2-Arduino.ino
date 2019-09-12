@@ -120,12 +120,20 @@ void loop() {
 void updateTime() {
   // Adjust 2.5 minutes = 150 seconds forward
   // So at 12:03 it already reads "five past 12"
-  DateTime now = rtc.now().unixtime() + 150;
-
-  disp_sec = now.second();
-  disp_min = now.minute();
-  disp_hrs = now.hour();
-
+  TCNT1 = 0;
+  
+  if(rtc.isrunning()){
+    DateTime now = rtc.now().unixtime() + 150;
+    disp_sec = now.second();
+    disp_min = now.minute();
+    disp_hrs = now.hour();
+  }
+  else{
+    disp_sec = second();
+    disp_min = minute();
+    disp_hrs = hour();
+  }
+    
   disp_min /= 5;
 
   if(disp_min >= min_offset)
