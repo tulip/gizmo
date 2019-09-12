@@ -133,6 +133,7 @@ void loop() {
 void updateTime() {
   // Adjust 2.5 minutes = 150 seconds forward
   // So at 12:03 it already reads "five past 12"
+  TCNT1 = 0;
   
   if(rtc.isrunning()){
     DateTime now = rtc.now().unixtime() + 150;
