@@ -10,7 +10,7 @@
 // Customizable options
 #include "english.h" // exchange this for the language you need
 boolean blink_enable = true;
-boolean blinknow = true;
+boolean blinknow = false;
 boolean setonce = false;
 #define FREQ_DISPLAY 490 // Hz
 #define FREQ_TIMEUPDATE  490 // Hz
@@ -66,7 +66,12 @@ boolean buttonHandled = true;
 
 void loop() {
   if(updatenow) {
-    if (rtc.isrunning()) {
+//    if (rtc.isrunning() && clockmode == NORMAL ) {
+//         blink_enable = !blink_enable;
+//         blinknow = true;
+//         TCNT1 = 0;
+    //    }
+    if ((rtc.isrunning() && disp_min == 3 && clockmode == NORMAL) || (rtc.isrunning() && disp_min == 9 && clockmode == NORMAL)){
       TCNT1 = 0;
     }
     updateTime();
@@ -155,10 +160,10 @@ void updateTime() {
     ++disp_hrs %= 12;
   else
     disp_hrs   %= 12;
+  
 }
 
 void prepareDisplay() {
-  
   blinknow = !blinknow;
   FOR_ALLROWS {
     disp[r]=B00000000;
