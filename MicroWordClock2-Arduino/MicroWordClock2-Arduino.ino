@@ -66,11 +66,6 @@ boolean buttonHandled = true;
 
 void loop() {
   if(updatenow) {
-//    if (rtc.isrunning() && clockmode == NORMAL ) {
-//         blink_enable = !blink_enable;
-//         blinknow = true;
-//         TCNT1 = 0;
-    //    }
     if ((rtc.isrunning() && disp_min == 3 && clockmode == NORMAL) || (rtc.isrunning() && disp_min == 9 && clockmode == NORMAL)){
       TCNT1 = 0;
     }
