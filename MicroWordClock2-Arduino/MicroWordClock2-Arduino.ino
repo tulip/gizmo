@@ -66,6 +66,9 @@ boolean buttonHandled = true;
 
 void loop() {
   if(updatenow) {
+    if ((rtc.isrunning() && disp_min == 3 && clockmode == NORMAL) || (rtc.isrunning() && disp_min == 9 && clockmode == NORMAL)){
+      TCNT1 = 0;
+    }
     updateTime();
     prepareDisplay();
     updatenow = false;
@@ -152,6 +155,7 @@ void updateTime() {
     ++disp_hrs %= 12;
   else
     disp_hrs   %= 12;
+  
 }
 
 void prepareDisplay() {
