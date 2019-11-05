@@ -84,3 +84,5 @@ done
 
 # Flashes the B bank to indicate completed programming
 blink_b_bank
+
+exit 0
