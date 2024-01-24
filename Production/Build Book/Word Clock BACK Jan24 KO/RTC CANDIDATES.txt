@@ -1,0 +1,10 @@
+The RTC (BOM line 17) original source from the first production run has been lost. The following links lead to similar products that are viable alternatives. 
+
+Generally, the part must use RTC module DS3231, include a small battery, and use a five-pin female header interface. The part is commonly used for hobbyist devices like Raspberry Pi.
+
+It is requested of AQS to identify a preferred supplier, whether from this list or elsewhere. 
+
+https://www.alibaba.com/product-detail/YOINNOVATI-Precision-RTC-DS3231-Real-Time_1600600460530.html - Shenzhen XMS Tech. Co. Ltd
+https://www.alibaba.com/product-detail/DS3231-Real-Time-Clock-Module-3_1601010859063.html - Rtx Tech. Co. Ltd
+https://www.alibaba.com/product-detail/Precision-DS3231-Real-Time-Clock-Module_1600857345503.html - Shenzhen Sanruisheng Tech. Co. Ltd
+https://www.alibaba.com/product-detail/Precision-DS3231-Real-Time-Clock-Module_1600179508889.html - Shenzhen Ruiqi Elec. Co. Ltd

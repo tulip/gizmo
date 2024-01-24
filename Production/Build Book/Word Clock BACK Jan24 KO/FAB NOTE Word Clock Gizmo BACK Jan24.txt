@@ -1,0 +1,37 @@
+Material Type: FR4
+Layer Count: 2
+Material Thickness: .062 inches
+Finish Plating: Lead Free Solder
+X Dimension: 120mm
+Y Dimension: 120mm
+Array X Dimension: N/A
+Array Y Dimension: N/A
+Array Up: N/A
+Outer Copper Wt: 1 oz
+Inner Copper Wt: N/A
+Castellated Holes: No
+Min. Castellated Hole Size: N/A
+Solder Mask Sides: Both Sides
+Solder Mask Color: REFER TO QUOTE
+Silkscreen Sides: Top Side
+Silkscreen Color: REFER TO QUOTE
+Tab Route: No
+Scoring: No
+Plated Slots: No
+Plated Edges: No
+Controlled Impedance: No
+Controlled Dielectric: No
+Gold Fingers: None
+ITAR: No
+CounterSink: No
+# Plated CounterSinks: 0
+# Non-Plated CounterSinks: 0
+CounterBore: No
+# Plated CounterBores: 0
+# Non-Plated CounterBores: 0
+Certification: IPC Class 2-A600
+AS9100: No
+Via-In-Pad: None
+Blind/Buried Vias: None
+Microvias: None
+Soldermask Plugged Vias: Yes

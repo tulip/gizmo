@@ -1,0 +1,4 @@
+Partlist exported from /Users/samchin/SC-Tulip/Micro-Word-Clock/EAGLE/WordClockFace.sch at 9/12/19 4:32 PM
+
+Qty Value Device                     Package  Parts          Description                                                                                                     PROD_ID    SF_ID    
+4         CONN_08SMD-STRAIGHT-FEMALE 1X08_SMD J1, J2, J3, J4 Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections CONN-10204 PRT-11543
